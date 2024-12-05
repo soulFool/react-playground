@@ -1,10 +1,13 @@
 import ReactPlayground from './ReactPlayground'
+import { PlaygroundProvider } from './ReactPlayground/PlaygroundContext'
 import './App.scss'
 
 function App() {
   return (
     <>
-      <ReactPlayground />
+      <PlaygroundProvider>
+        <ReactPlayground />
+      </PlaygroundProvider>
     </>
   )
 }

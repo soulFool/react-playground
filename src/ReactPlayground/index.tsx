@@ -9,14 +9,16 @@ export default function ReactPlayground() {
     <div style={{ height: '100vh' }}>
       <Header />
       {/* defaultSizes 指定 100、100 也就是按照 1:1 的比例展示 */}
-      <Allotment defaultSizes={[100, 100]}>
-        <Allotment.Pane minSize={0}>
-          <CodeEditor />
-        </Allotment.Pane>
-        <Allotment.Pane minSize={0}>
-          <Preview />
-        </Allotment.Pane>
-      </Allotment>
+      <div style={{ height: 'calc(100% - 50px)' }}>
+        <Allotment defaultSizes={[100, 100]}>
+          <Allotment.Pane minSize={0}>
+            <CodeEditor />
+          </Allotment.Pane>
+          <Allotment.Pane minSize={0}>
+            <Preview />
+          </Allotment.Pane>
+        </Allotment>
+      </div>
     </div>
   )
 }
