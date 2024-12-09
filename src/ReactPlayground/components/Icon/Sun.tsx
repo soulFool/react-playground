@@ -1,7 +1,7 @@
 import { IconProps } from './type'
 
-const Moon = (props: IconProps) => {
-  const { className, title, onClick } = props
+const Sun = (props: IconProps) => {
+  const { className, style, title, onClick } = props
 
   return (
     <svg
@@ -11,7 +11,7 @@ const Moon = (props: IconProps) => {
       viewBox="0 0 24 24"
       className={className}
       onClick={onClick}
-      style={{ cursor: 'pointer' }}
+      style={{ cursor: 'pointer', ...style }}
     >
       <path
         fill="currentColor"
@@ -53,4 +53,4 @@ const Moon = (props: IconProps) => {
   )
 }
 
-export default Moon
+export default Sun
