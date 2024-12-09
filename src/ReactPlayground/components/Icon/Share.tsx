@@ -12,13 +12,10 @@ const Share = (props: IconProps) => {
       onClick={onClick}
       style={{ cursor: 'pointer', ...style }}
     >
-      <g
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
+      {/* stroke-linecap="round"
+      stroke-width="2"
+      stroke-linejoin="round" */}
+      <g fill="none" stroke="currentColor">
         <circle cx="18" cy="5" r="3" />
         <circle cx="6" cy="12" r="3" />
         <circle cx="18" cy="19" r="3" />

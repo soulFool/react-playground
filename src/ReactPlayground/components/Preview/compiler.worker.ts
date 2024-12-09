@@ -125,3 +125,15 @@ export const compile = (files: Files) => {
   const main = files[ENTRY_FILE_NAME]
   return babelTransform(ENTRY_FILE_NAME, main.value, files)
 }
+
+// 在 worker 线程向主线程 postMessage
+self.addEventListener('message', async ({ data }) => {
+  try {
+    self.postMessage({
+      type: 'COMPILED_CODE',
+      data: compile(data),
+    })
+  } catch (e) {
+    self.postMessage({ type: 'ERROR', error: e })
+  }
+})
